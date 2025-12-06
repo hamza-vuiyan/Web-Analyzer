@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.security.cert.Certificate;
 import java.util.HashMap;
@@ -23,7 +24,7 @@ public class WebsiteAnalyzerService {
 
         // HEAD request timing
         long headStart = System.nanoTime();
-        HttpURLConnection headConn = (HttpURLConnection) new URL(url).openConnection();
+        HttpURLConnection headConn = (HttpURLConnection) URI.create(url).toURL().openConnection();
         headConn.setRequestMethod("HEAD");
         headConn.setConnectTimeout(10000);
         headConn.setReadTimeout(10000);
@@ -86,7 +87,7 @@ public class WebsiteAnalyzerService {
 
     private boolean hasResource(String baseUrl, String resourcePath) {
         try {
-            HttpURLConnection c = (HttpURLConnection) new URL(baseUrl + resourcePath).openConnection();
+            HttpURLConnection c = (HttpURLConnection) URI.create(baseUrl + resourcePath).toURL().openConnection();
             c.setRequestMethod("HEAD");
             c.setConnectTimeout(5000);
             c.setReadTimeout(5000);
