@@ -140,7 +140,7 @@ const analyzer = new WebAnalyzer({
 ```json
 {
   "url": "https://example.com",
-  "timestamp": "2025-12-06T00:00:00.000Z",
+  "timestamp": "2024-01-15T10:30:00.000Z",
   "performance": {
     "score": 85,
     "metrics": {
@@ -261,7 +261,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 - GitHub: [@hamza-vuiyan](https://github.com/hamza-vuiyan)
-- Email: it22046@mbstu.ac.bd
+- Project Issues: [GitHub Issues](https://github.com/hamza-vuiyan/Web-Analyzer/issues)
 
 ## 🗺️ Roadmap
 
